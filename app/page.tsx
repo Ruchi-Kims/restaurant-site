@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div className="bg-black text-white">
 
-      {/* Hero */}
-<section className="relative text-center py-40 px-8 border-b border-yellow-600 overflow-hidden">
+  {/* Hero */}
+<section className="relative text-center py-24 md:py-40 px-6 md:px-8 border-b border-yellow-600 overflow-hidden">
 
   {/* Vidéo en background */}
   <video
@@ -16,9 +16,9 @@ export default function Home() {
     className="absolute inset-0 w-full h-full object-cover"
   >
     <source
-  src="/video-hero.mp4"
-  type="video/mp4"
-/>
+      src="/video-hero.mp4"
+      type="video/mp4"
+    />
   </video>
 
   {/* Overlay sombre */}
@@ -26,19 +26,19 @@ export default function Home() {
 
   {/* Contenu */}
   <div className="relative z-10">
-    <p className="text-yellow-500 tracking-[0.4em] uppercase text-lg mb-6">
+    <p className="text-yellow-500 tracking-[0.3em] md:tracking-[0.4em] uppercase text-sm md:text-lg mb-4 md:mb-6">
       Une expérience unique
     </p>
-    <h1 className="text-7xl font-serif font-bold mb-8 leading-tight">
+    <h1 className="text-3xl md:text-7xl font-serif font-bold mb-4 md:mb-8 leading-tight">
       L'Art de la Cuisine <br /> du Monde
     </h1>
-    <p className="text-gray-300 text-2xl mb-12 max-w-2xl mx-auto leading-relaxed">
+    <p className="text-gray-300 text-base md:text-2xl mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
       Voyagez à travers les saveurs du monde entier,
       sublimées par notre chef dans un cadre raffiné.
     </p>
     <Link
       href="/menu"
-      className="border-2 border-yellow-500 text-yellow-500 px-12 py-4 rounded-full uppercase tracking-widest text-lg hover:scale-110 hover:bg-yellow-500 hover:text-white transition-all duration-300 inline-block"
+      className="border-2 border-yellow-500 text-yellow-500 px-8 md:px-12 py-3 md:py-4 rounded-full uppercase tracking-widest text-sm md:text-lg hover:scale-110 hover:bg-yellow-500 hover:text-white transition-all duration-300 inline-block"
     >
       Découvrir le Menu
     </Link>
