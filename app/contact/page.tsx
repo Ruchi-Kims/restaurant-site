@@ -45,8 +45,8 @@ export default function Contact() {
   const handleWhatsApp = () => {
     const phone = "+212695891235";
     const messageWA = form.nom || form.message
-      ? `Bonjour Chez Claude !\n${form.nom ? `Je m'appelle ${form.nom}.\n` : ""}${form.message || ""}`
-      : "Bonjour Chez Claude ! Je souhaite vous contacter.";
+      ? `Bonjour Chez L'Assiette !\n${form.nom ? `Je m'appelle ${form.nom}.\n` : ""}${form.message || ""}`
+      : "Bonjour Chez L'Assiette ! Je souhaite vous contacter.";
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(messageWA)}`, "_blank");
   };
 

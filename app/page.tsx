@@ -5,35 +5,46 @@ export default function Home() {
     <div className="bg-black text-white">
 
       {/* Hero */}
-      <section className="relative text-center py-24 md:py-40 px-6 md:px-8 border-b border-cyan-600 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/video-hero.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative z-10">
-          <p className="text-yellow-500 tracking-[0.3em] md:tracking-[0.4em] uppercase text-sm md:text-lg mb-4 md:mb-6">
-            Saveurs de la vie
-          </p>
-          <h1 className="text-3xl md:text-7xl font-serif font-bold text-cyan-700 mb-4 md:mb-8 leading-tight">
-            L'Assiette Restaurant <br /> 
-          </h1>
-          <p className="text-gray-400 text-base md:text-2xl  mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
-            L'Assiette est un établissement multifonctionnel situé au centre-ville de Brazzaville qui combine plusieurs services pour couvrir tous les moments de la journée.
-          </p>
-          <Link
-            href="/menu"
-            className="border-2 border-cyan-500 text-cyan-700 px-8 md:px-12 py-3 md:py-4 rounded-full uppercase tracking-widest text-sm md:text-lg hover:scale-110 hover:bg-cyan-500 hover:text-white transition-all duration-300 inline-block"
-          >
-            Découvrir le Menu
-          </Link>
-        </div>
-      </section>
+<section className="relative text-center py-24 md:py-40 px-6 md:px-8 border-b border-cyan-600 overflow-hidden">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+    <source src="/video-hero.mp4" type="video/mp4" />
+  </video>
+  <div className="absolute inset-0 bg-black opacity-60"></div>
+  <div className="relative z-10">
+    <p className="text-yellow-500 tracking-[0.3em] md:tracking-[0.4em] uppercase text-sm md:text-lg mb-4 md:mb-6">
+      Saveurs de la vie
+    </p>
+    <h1 className="text-3xl md:text-7xl font-serif font-bold text-cyan-700 mb-4 md:mb-8 leading-tight">
+      L'Assiette Restaurant <br /> 
+    </h1>
+    <p className="text-gray-400 text-base md:text-2xl mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
+      L'Assiette est un établissement multifonctionnel situé au centre-ville de Brazzaville qui combine plusieurs services pour couvrir tous les moments de la journée.
+    </p>
+    
+    {/* Groupe de boutons */}
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+      <Link
+        href="/menu"
+        className="w-full md:w-auto border-2 border-cyan-500 text-cyan-500 px-8 md:px-12 py-3 md:py-4 rounded-full uppercase tracking-widest text-sm md:text-lg hover:scale-105 hover:bg-cyan-500 hover:text-black transition-all duration-300 inline-block"
+      >
+        Découvrir le Menu
+      </Link>
+      
+      <Link
+        href="/reservation"
+        className="w-full md:w-auto bg-cyan-600 border-2 border-cyan-600 text-white px-8 md:px-12 py-3 md:py-4 rounded-full uppercase tracking-widest text-sm md:text-lg hover:scale-105 hover:bg-transparent hover:text-cyan-500 transition-all duration-300 inline-block"
+      >
+        Réserver maintenant
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Section Pourquoi nous choisir */}
       <section className="py-24 px-8" style={{ backgroundColor: "#1c1410" }}>
