@@ -9,29 +9,29 @@ const plats = [
       {
         nom: "Salade César",
         description: "Laitue romaine, parmesan affiné, croûtons dorés, sauce césar maison",
-        prix: "8€",
-        image: "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&q=80",
+        prix: "5000 FCFA",
+        image: "/salade.webp",
         tag: "Végétarien",
       },
       {
-        nom: "Soupe à l'oignon",
+        nom: "Pasta Carbonara",
         description: "Oignons caramélisés, bouillon bœuf, gratinée au comté",
-        prix: "7€",
-        image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80",
+        prix: "3000 FCFA",
+        image: "/carbonara.webp",
         tag: "Signature",
       },
       {
         nom: "Bruschetta",
         description: "Pain grillé, tomates fraîches, basilic, huile d'olive extra vierge",
-        prix: "6€",
-        image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=400&q=80",
+        prix: "4000 FCFA",
+        image: "/passion.webp",
         tag: "Végétarien",
       },
       {
         nom: "Tartare de Saumon",
         description: "Saumon frais, avocat, citron vert, coriandre, huile de sésame",
-        prix: "12€",
-        image: "https://images.unsplash.com/photo-1534482421-64566f976cfa?w=400&q=80",
+        prix: "4000 FCFA",
+        image: "/citron.webp",
         tag: "Chef's pick",
       },
     ],
@@ -42,29 +42,29 @@ const plats = [
       {
         nom: "Entrecôte grillée",
         description: "Entrecôte 300g, sauce au poivre, frites maison, salade verte",
-        prix: "24€",
-        image: "https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80",
+        prix: "5000 FCFA",
+        image: "/plat1.webp",
         tag: "Best-seller",
       },
       {
-        nom: "Saumon rôti",
+        nom: "Crevetes",
         description: "Filet de saumon Label Rouge, légumes de saison, beurre citronné",
-        prix: "22€",
-        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400&q=80",
+        prix: "6000 FCFA",
+        image: "/plat2.webp",
         tag: "Signature",
       },
       {
-        nom: "Pasta Carbonara",
+        nom: "Pizza Italien",
         description: "Spaghetti artisanaux, lardons fumés, parmesan 24 mois, œuf fermier",
-        prix: "16€",
-        image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400&q=80",
+        prix: "3000 FCFA",
+        image: "/plat3.webp",
         tag: "Classique",
       },
       {
-        nom: "Poulet Tandoori",
+        nom: "Burger",
         description: "Poulet mariné aux épices indiennes, riz basmati, raïta menthe",
-        prix: "18€",
-        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80",
+        prix: "4500 FCFA",
+        image: "/burger.webp",
         tag: "Chef's pick",
       },
     ],
@@ -73,32 +73,32 @@ const plats = [
     categorie: "✦ Desserts",
     items: [
       {
-        nom: "Tiramisu",
+        nom: "Creme gourmandise",
         description: "Mascarpone crémeux, café espresso, biscuits savoiardi, cacao",
-        prix: "7€",
-        image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=80",
+        prix: "1500 FCFA",
+        image: "/dessert1.webp",
         tag: "Classique",
       },
       {
         nom: "Crème brûlée",
         description: "Crème onctueuse à la vanille de Madagascar, caramel croustillant",
-        prix: "6€",
-        image: "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=400&q=80",
+        prix: "2000 FCFA",
+        image: "/dessert2.webp",
         tag: "Signature",
       },
       {
-        nom: "Fondant au chocolat",
+        nom: "Galettes au crème",
         description: "Chocolat noir Valrhona 70%, cœur coulant, glace vanille maison",
-        prix: "8€",
-        image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&q=80",
+        prix: "1200 FCFA",
+        image: "/dessert3.webp",
         tag: "Best-seller",
       },
       {
-        nom: "Panna Cotta Fruits Rouges",
+        nom: "Chocolat-Chantilly",
         description: "Crème vanillée, coulis de framboises fraîches, menthe poivrée",
-        prix: "7€",
-        image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80",
-        tag: "Végétarien",
+        prix: "2500 FCFA",
+        image: "/dessert4.webp",
+        tag: "Classique",
       },
     ],
   },
@@ -157,25 +157,21 @@ export default function Menu() {
         <p className="text-yellow-500 tracking-[0.4em] uppercase text-sm text-center mb-4">
           Notre Sélection
         </p>
-        <h1 className="text-5xl font-serif font-bold text-center mb-4">
+        <h1 className="text-4xl font-serif font-bold text-center mb-16 text-cyan-500">
           Le Menu
         </h1>
-        <div className="flex items-center justify-center gap-4 mb-16">
-          <div className="h-px w-24 bg-yellow-600"></div>
-          <span className="text-yellow-500">✦</span>
-          <div className="h-px w-24 bg-yellow-600"></div>
-        </div>
+        
 
         {plats.map((categorie) => (
           <div key={categorie.categorie} className="mb-20">
 
             {/* Titre catégorie */}
             <div className="flex items-center gap-4 mb-10">
-              <div className="h-px flex-1 bg-yellow-600 opacity-30"></div>
-              <h2 className="text-yellow-500 uppercase tracking-widest text-base font-semibold">
+              <div className="h-px flex-1 bg-cyan-600 opacity-30"></div>
+              <h2 className="text-cyan-500 uppercase tracking-widest text-base font-semibold">
                 {categorie.categorie}
               </h2>
-              <div className="h-px flex-1 bg-yellow-600 opacity-30"></div>
+              <div className="h-px flex-1 bg-cyan-600 opacity-30"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

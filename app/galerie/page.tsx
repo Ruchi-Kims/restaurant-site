@@ -1,91 +1,79 @@
 "use client";
 import { useState } from "react";
 
-const categories = ["Tout", "Ambiance", "Plats", "Vue & Terrasse"];
+const categories = ["Tout", "Nos Espaces","Ambiance", "Événements"];
 
-const images = [
-  // Ambiance
-  {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
-    alt: "Salle principale du restaurant",
-    category: "Ambiance",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&q=80",
-    alt: "Ambiance tamisée en soirée",
-    category: "Ambiance",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
-    alt: "Table dressée avec élégance",
-    category: "Ambiance",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&q=80",
-    alt: "Bar et lounge",
-    category: "Ambiance",
-  },
-
-  // Plats
-  {
-    src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
-    alt: "Plat signature du chef",
-    category: "Plats",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80",
-    alt: "Entrée fraîcheur",
-    category: "Plats",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80",
-    alt: "Dessert maison",
-    category: "Plats",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=80",
-    alt: "Sélection de vins",
-    category: "Plats",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
-    alt: "Pizza au feu de bois",
-    category: "Plats",
-  },
-
-  // Vue & Terrasse
-  {
-    src: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=800&q=80",
-    alt: "Terrasse en soirée",
-    category: "Vue & Terrasse",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80",
-    alt: "Vue panoramique",
-    category: "Vue & Terrasse",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80",
-    alt: "Terrasse de jour",
-    category: "Vue & Terrasse",
-  },
-];
+const sections: Record<string, { src: string; alt: string; titre: string; description: string; details: string[] }[]> = {
+  "Nos Espaces": [
+    {
+      src: "/contactbg.webp",
+      alt: "Restaurant & Lounge Bar",
+      titre: "Restaurant & Lounge Bar",
+      description:
+        "Un espace élégant et chaleureux où gastronomie raffinée et ambiance lounge se rencontrent. Que ce soit pour un déjeuner d'affaires ou une soirée entre amis, notre salle vous accueille dans un cadre cosy et apaisant, au cœur de Brazzaville.",
+      details: ["Capacité : 60 couverts", "Cuisine cosmopolite", "Ouvert 7j/7"],
+    },
+    {
+      src: "/assiette2.webp",
+      alt: "Pâtisserie & Boulangerie",
+      titre: "Pâtisserie & Boulangerie",
+      description:
+        "Dès l'aube, laissez-vous séduire par l'odeur des croissants chauds et de nos viennoiseries maison. Notre espace pâtisserie est une invitation à la gourmandise : gâteaux de fête, douceurs chocolatées et créations sucrées pour tous vos moments spéciaux.",
+      details: ["Croissants & viennoiseries", "Gâteaux sur commande", "Ouvert dès 7h"],
+    },
+  ],
+  "Ambiance": [
+    {
+      src: "/ambiance2.webp",
+      alt: "Salle principale",
+      titre: "Une Atmosphère Unique",
+      description:
+        "Dès que vous franchissez notre porte, vous êtes accueillis par une atmosphère chaleureuse et raffinée. Notre décoration soignée, l'éclairage tamisé et la musique d'ambiance créent une expérience sensorielle complète, idéale pour chaque moment de la journée.",
+      details: ["Décoration soignée", "Éclairage tamisé", "Musique d'ambiance"],
+    },
+    {
+      src: "ambiance1.webp",
+      alt: "Bar et lounge",
+      titre: "Le Lounge Bar",
+      description:
+        "Notre lounge bar est l'endroit idéal pour se retrouver autour d'un cocktail ou d'un verre de vin. Dans un cadre intime et élégant, nos barmen vous proposent une sélection de boissons soigneusement choisies pour sublimer votre soirée à Brazzaville.",
+      details: ["Cocktails maison", "Sélection de vins", "Ambiance feutrée"],
+    },
+  ],
+  "Événements": [
+    {
+      src: "/buffet.webp",
+      alt: "Buffets du vendredi et samedi",
+      titre: "Buffets & Soirées à Thème",
+      description:
+        "Chaque vendredi et samedi soir, L'Assiette se transforme en scène gastronomique avec ses buffets à volonté. Des soirées thématiques — Saint-Valentin, Journée des droits de la femme, fêtes nationales — ponctuent notre calendrier pour des moments inoubliables.",
+      details: ["Buffet à volonté vendredi & samedi", "Soirées thématiques", "Animations en live"],
+    },
+    {
+      src: "/events3.webp",
+      alt: "Événements privés",
+      titre: "Événements Privés & Séminaires",
+      description:
+        "L'Assiette met son cadre élégant à votre disposition pour vos événements privés : anniversaires, mariages, séminaires d'entreprise ou célébrations familiales. Notre équipe vous accompagne dans l'organisation pour faire de chaque événement un moment d'exception.",
+      details: ["Privatisation possible", "Menu personnalisé", "Équipe dédiée"],
+    },
+  ],
+};
 
 export default function Galerie() {
   const [activeCategory, setActiveCategory] = useState("Tout");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const filtered =
+  const categoriesToShow =
     activeCategory === "Tout"
-      ? images
-      : images.filter((img) => img.category === activeCategory);
+      ? ["Nos Espaces", "Ambiance", "Événements"]
+      : [activeCategory];
 
   return (
     <div
       className="relative text-white min-h-screen py-20 px-8"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1600&q=80')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1600&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -99,20 +87,20 @@ export default function Galerie() {
         <p className="text-yellow-500 tracking-[0.4em] uppercase text-sm text-center mb-4">
           Notre Univers
         </p>
-        <h1 className="text-4xl font-serif font-bold text-center mb-16">
+        <h1 className="text-4xl font-serif font-bold text-center mb-16 text-cyan-500">
           Galerie
         </h1>
 
         {/* Filtres */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-6 py-2 uppercase tracking-[0.25em] text-xs border transition-all duration-300 rounded-full ${
                 activeCategory === cat
-                  ? "border-yellow-500 bg-yellow-500 text-black"
-                  : "border-gray-600 text-gray-400 hover:border-yellow-500 hover:text-yellow-500"
+                  ? "border-cyan-500 bg-cyan-500 text-black"
+                  : "border-gray-600 text-gray-400 hover:border-cyan-500 hover:text-cyan-500"
               }`}
             >
               {cat}
@@ -120,27 +108,64 @@ export default function Galerie() {
           ))}
         </div>
 
-        {/* Grille uniforme */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filtered.map((img, i) => (
-            <div
-              key={i}
-              className="cursor-pointer overflow-hidden rounded-2xl group relative aspect-[4/3]"
-              onClick={() => setSelectedImage(img.src)}
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              {/* Overlay hover */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition-all duration-300 rounded-2xl flex flex-col justify-end p-5">
-                <p className="text-white text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                  {img.alt}
-                </p>
-                <span className="text-yellow-500 text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-300 delay-75 translate-y-2 group-hover:translate-y-0 mt-1">
-                  {img.category}
-                </span>
+        {/* ── Sections ── */}
+        <div className="space-y-24">
+          {categoriesToShow.map((cat) => (
+            <div key={cat}>
+
+              {/* Séparateur de section (uniquement en mode "Tout") */}
+              {activeCategory === "Tout" && (
+                <div className="flex items-center gap-4 mb-10">
+                  <div className="h-px flex-1 bg-cyan-600/30" />
+                  <p className="text-cyan-500 uppercase tracking-[0.35em] text-xs">{cat}</p>
+                  <div className="h-px flex-1 bg-cyan-600/30" />
+                </div>
+              )}
+
+              {/* Cartes showcase */}
+              <div className="space-y-6">
+                {sections[cat].map((item, i) => (
+                  <div
+                    key={i}
+                    className={`flex flex-col md:flex-row ${i % 2 !== 0 ? "md:flex-row-reverse" : ""} border border-yellow-600/20 overflow-hidden`}
+                  >
+                    {/* Image */}
+                    <div
+                      className="md:w-3/5 h-72 md:h-96 relative group cursor-pointer overflow-hidden"
+                      onClick={() => setSelectedImage(item.src)}
+                    >
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <div className="md:w-2/5 bg-black/60 p-10 flex flex-col justify-center">
+                      <p className="text-yellow-500 uppercase tracking-[0.35em] text-xs mb-3">
+                        {cat}
+                      </p>
+                      <h2 className="text-2xl font-serif font-bold text-white mb-5">
+                        {item.titre}
+                      </h2>
+                      <div className="w-8 h-px bg-yellow-600 mb-5" />
+                      <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                        {item.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {item.details.map((d, j) => (
+                          <li key={j} className="flex items-center gap-3 text-gray-300 text-xs uppercase tracking-widest">
+                            <span className="text-yellow-500">✦</span>
+                            {d}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

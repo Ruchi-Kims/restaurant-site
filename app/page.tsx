@@ -63,7 +63,7 @@ export default function Home() {
             <div
               className="relative rounded-2xl overflow-hidden h-80 group cursor-pointer"
               style={{
-                backgroundImage: "url('/assiette.png')",
+                backgroundImage: "url('/assiette.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -81,7 +81,7 @@ export default function Home() {
             <div
               className="relative rounded-2xl overflow-hidden h-80 group cursor-pointer"
               style={{
-                backgroundImage: "url('/patisserie.jpg')",
+                backgroundImage: "url('/patisserie.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -99,7 +99,7 @@ export default function Home() {
             <div
               className="relative rounded-2xl overflow-hidden h-80 group cursor-pointer"
               style={{
-                backgroundImage: "url('/glacier.jpg')",
+                backgroundImage: "url('/glacier.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -117,7 +117,7 @@ export default function Home() {
             <div
               className="relative rounded-2xl overflow-hidden h-80 group cursor-pointer"
               style={{
-                backgroundImage: "url('/evenement.jpg')",
+                backgroundImage: "url('/evenement.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -204,7 +204,7 @@ export default function Home() {
             {/* Grande image gauche — pleine hauteur */}
             <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer">
               <img
-                src="/assiette2.jpg"
+                src="/assiette2.webp"
                 alt="Salle principale"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -218,7 +218,7 @@ export default function Home() {
             {/* Image haut droite 1 */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group cursor-pointer">
               <img
-                src="/italien.jpg"
+                src="/passion.webp"
                 alt="Plat signature"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -232,7 +232,7 @@ export default function Home() {
             {/* Image haut droite 2 */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group cursor-pointer">
               <img
-                src="/pizza.jpg"
+                src="/pizza.webp"
                 alt="Entrée fraîcheur"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -246,7 +246,7 @@ export default function Home() {
             {/* Image bas droite 1 */}
             <div className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group cursor-pointer">
               <img
-                src="/salade.jpg"
+                src="/salade.webp"
                 alt="Terrasse en soirée"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -260,7 +260,7 @@ export default function Home() {
             {/* Image bas droite 2 — avec lien vers galerie */}
             <Link href="/galerie" className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden group cursor-pointer block">
               <img
-                src="/frites.jpg"
+                src="/frites.webp"
                 alt="Voir toute la galerie"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-50 group-hover:brightness-40"
               />

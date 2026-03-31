@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   try {
     // 1. Email pour le RESTAURATEUR (Toi)
     await resend.emails.send({
-      from: "Chez Claude <onboarding@resend.dev>",
+      from: "Chez L'Assiette <onboarding@resend.dev>",
       to: process.env.EMAIL_RESTAURANT!,
       subject: `🍽️ Nouvelle réservation de ${nom}`,
       html: `
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
     // 2. Email de CONFIRMATION pour le CLIENT
     if (email) {
       await resend.emails.send({
-        from: "Chez Claude <onboarding@resend.dev>",
+        from: "Chez L'Assiette <onboarding@resend.dev>",
         to: email,
         subject: "Confirmation de votre réservation — Chez Claude",
         html: `

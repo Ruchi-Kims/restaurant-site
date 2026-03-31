@@ -78,7 +78,7 @@ export default function Navbar() {
 
       {/* ── Bouton WhatsApp flottant ── */}
       <a
-        href="https://wa.me/+212695891235"
+        href="https://wa.me/+242069032222"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25d366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#1ebe5d] transition-all duration-300"

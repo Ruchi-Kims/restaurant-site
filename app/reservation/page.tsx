@@ -64,10 +64,10 @@ export default function Reservation() {
       return;
     }
 
-    const phone = "+212695891235"; // ← numéro WhatsApp du restaurant
+    const phone = "+242069032222"; // ← numéro WhatsApp du restaurant
 
     const messageWA =
-      `Bonjour Chez Claude ! ✦\n` +
+      `Bonjour Chez L'Assiette ! ✦\n` +
       `Je souhaite réserver une table :\n` +
       `- Nom : ${form.nom}\n` +
       `- Téléphone : ${form.telephone}\n` +
@@ -86,7 +86,7 @@ export default function Reservation() {
       className="relative text-white min-h-screen py-20 px-8"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1600&q=80')",
+          "url('/reserve.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -98,9 +98,10 @@ export default function Reservation() {
         <p className="text-yellow-500 tracking-[0.4em] uppercase text-sm text-center mb-4">
           Réservez votre table
         </p>
-        <h1 className="text-4xl font-serif font-bold text-center mb-16">
+        <h1 className="text-4xl font-serif font-bold text-center mb-16 text-cyan-500">
           Réservation
         </h1>
+        <p className="text-gray-400 text-base md:text-2xl mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">Prenez votre reservation pour venir deguster votre Assiette</p>
 
         <div className="border border-yellow-600 p-10 space-y-6">
 

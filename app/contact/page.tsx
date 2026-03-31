@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   const handleWhatsApp = () => {
-    const phone = "+212695891235";
+    const phone = "+242069032222";
     const messageWA = form.nom || form.message
       ? `Bonjour Chez L'Assiette !\n${form.nom ? `Je m'appelle ${form.nom}.\n` : ""}${form.message || ""}`
       : "Bonjour Chez L'Assiette ! Je souhaite vous contacter.";
@@ -54,7 +54,7 @@ export default function Contact() {
     <div
       className="relative text-white min-h-screen py-20 px-8"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80')",
+        backgroundImage: "url('/contactbg.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -68,12 +68,12 @@ export default function Contact() {
         <p className="text-yellow-500 tracking-[0.4em] uppercase text-sm text-center mb-4">
           Nous Trouver
         </p>
-        <h1 className="text-4xl font-serif font-bold text-center mb-16">
+        <h1 className="text-4xl font-serif font-bold text-center mb-16 text-cyan-500">
           Contact
         </h1>
 
         {/* Grid encadré */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] border border-yellow-600/20">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] border border-yellow-600/20 bg-cyan-100">
 
           {/* ── Colonne Infos ── */}
           <div className="flex flex-col justify-between p-12 border-b md:border-b-0 md:border-r border-yellow-600/20 bg-white[0.015]">
@@ -81,7 +81,7 @@ export default function Contact() {
             <div className="space-y-0">
               <div>
                 <h3 className="text-yellow-500 uppercase tracking-[0.4em] text-xs mb-2">Adresse</h3>
-                <p className="text-gray-400 text-sm font-light leading-relaxed">12 Rue des Saveurs<br />75001 Paris, France</p>
+                <p className="text-gray-400 text-sm font-light leading-relaxed">01 Bis Avenue des Aiglons, Rue de l'amitié,<br />Centre Ville, Brazzaville 00242</p>
               </div>
               <div className="w-8 h-px bg-yellow-600/30 my-7" />
               <div>
@@ -94,12 +94,12 @@ export default function Contact() {
               <div className="w-8 h-px bg-yellow-600/30 my-7" />
               <div>
                 <h3 className="text-yellow-500 uppercase tracking-[0.4em] text-xs mb-2">Téléphone</h3>
-                <p className="text-gray-400 text-sm font-light">+33 1 23 45 67 89</p>
+                <p className="text-gray-400 text-sm font-light">+242 05 514 2222 / 06 903 2222</p>
               </div>
               <div className="w-8 h-px bg-yellow-600/30 my-7" />
               <div>
                 <h3 className="text-yellow-500 uppercase tracking-[0.4em] text-xs mb-2">Email</h3>
-                <p className="text-gray-400 text-sm font-light">contact@chezclaude.fr</p>
+                <p className="text-gray-400 text-sm font-light">contact@lassietterestaurant.cg</p>
               </div>
             </div>
 
