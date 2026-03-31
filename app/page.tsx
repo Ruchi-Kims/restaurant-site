@@ -117,7 +117,7 @@ export default function Home() {
             <div
               className="relative rounded-2xl overflow-hidden h-80 group cursor-pointer"
               style={{
-                backgroundImage: "url('/evenement.webp')",
+                backgroundImage: "url('/fete.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

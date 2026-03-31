@@ -102,6 +102,39 @@ const plats = [
       },
     ],
   },
+  {
+    categorie: "✦ Boissons",
+    items: [
+      {
+        nom: "Mojito parfait",
+        description: "Eau clair, citron, Menthe",
+        prix: "1500 FCFA",
+        image: "/mojito.webp",
+        tag: "Signature",
+      },
+      {
+        nom: "Cocktail frais",
+        description: "Citron, ananas, oranges, menthes",
+        prix: "2000 FCFA",
+        image: "/cocktail.webp",
+        tag: "Signature",
+      },
+      {
+        nom: "Cocktail équilibré",
+        description: "Citron, ananas, oranges, menthes",
+        prix: "1200 FCFA",
+        image: "/cocktaile.webp",
+        tag: "Best-seller",
+      },
+      {
+        nom: "Vent de fraicheur",
+        description: "Citron, ananas, oranges, menthes",
+        prix: "2500 FCFA",
+        image: "/vent.webp",
+        tag: "Classique",
+      },
+    ],
+  },
 ];
 
 const tagColors: Record<string, string> = {
