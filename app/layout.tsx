@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Chez Claude - Restaurant",
-  description: "Le meilleur restaurant de la ville",
+  title: "L'Assiette - Restaurant",
+  description: "Saveurs de la vie",
 };
 
 export default function RootLayout({
