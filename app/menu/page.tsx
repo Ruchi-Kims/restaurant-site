@@ -42,7 +42,7 @@ const plats = [
       {
         nom: "Entrecôte grillée",
         description: "Entrecôte 300g, sauce au poivre, frites maison, salade verte",
-        prix: "5000 FCFA",
+        prix: "8000 FCFA",
         image: "/plat1.webp",
         tag: "Best-seller",
       },
