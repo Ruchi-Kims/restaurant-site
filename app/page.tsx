@@ -24,7 +24,7 @@ export default function Home() {
       L'Assiette Restaurant <br /> 
     </h1>
     <p className="text-gray-400 text-base md:text-2xl mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
-      L'Assiette est un établissement multifonctionnel situé au centre-ville de Brazzaville qui combine plusieurs services pour couvrir tous les moments de la journée.
+      L'Assiette est un établissement multifonctionnel situé au centre-ville de Brazzaville qui combine plusieurs services pour couvrir tous les bons moments de la journée.
     </p>
     
     {/* Groupe de boutons */}
